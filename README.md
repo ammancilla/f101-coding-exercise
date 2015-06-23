@@ -89,4 +89,3 @@ By doing this we ensure that the retrieve of the top ten shows is reduced to a s
 ## test/models/shows.rb
 * Define test to test the #calculate_reviews_average method.
 * Define test to test the #update_reviews_average method.
-
