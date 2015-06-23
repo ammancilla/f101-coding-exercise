@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <br><h1 align="center">TOP SHOWS</h1><br>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Rating Average</th>
+            <th>Rating Count</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @shows.each_with_index do |show, i| %>
+            <tr>
+              <td><%= i + 1 %></td>
+              <td><%= show.title %></td>
+              <td><%= show.reviews_average %></td>
+              <td><%= show.reviews_count %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p align="center">Developed by: Alfonso Mancilla Alvis</p>
+    </div>
+  </div>
+</div>
+
