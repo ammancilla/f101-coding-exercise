@@ -11,12 +11,12 @@ class ShowTest < ActiveSupport::TestCase
     @show = shows(:one)
   end
 
-  test '#calculate_reviews_average should calculate the new average based on the current average and the new score' do
+  test '#calculate_reviews_average should calculate the new average given a new score' do
     # Assuming there is a new score of 100
     assert_equal 85.78, @show.send('calculate_reviews_average', 100).to_f.round(2)
   end
 
-  test '#update_reviews_average should update the show :reviews_average and :reviews_count' do
+  test '#update_reviews_average should update the show :reviews_average and :reviews_count given a new score' do
     @show.update_reviews_average(100)
 
     assert_equal 85.78, @show.reviews_average.to_f.round(2)
