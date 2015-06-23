@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
 
-  test '#update_show_average_rating should update the show reviews_average on :after_create' do
+  test '#update_show_reviews_average should update the show reviews_average on :after_create' do
     review =  Review.create!(
                 show_id: 1, critic_name: 'Alfonso Manuel', 
                 score: 100, publication_name: 'Lorem ipsum dolor', 

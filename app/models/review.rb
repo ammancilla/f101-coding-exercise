@@ -9,11 +9,11 @@ class Review < ActiveRecord::Base
   validates :score, numericality: { greater_than_or_equal_to: 0 }
 
   # Callbacks
-  after_create :update_show_average_rating
+  after_create :update_show_reviews_average
 
   # Methods
   private
-    def update_show_average_rating
+    def update_show_reviews_average
       self.show.update_reviews_average(self.score)
     end
 end

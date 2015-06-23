@@ -57,7 +57,7 @@ By doing this we ensure that the retrieve of the top ten shows is reduced to a s
 
 **app/models/review.rb**
 * Add some general validations.
-* Create method #update_show_average_rating and set it to be called in the :after_create callback.
+* Create method #update_show_reviews_average and set it to be called in the :after_create callback.
 
 **app/models/show.rb**
 * Add some general validations.
@@ -84,7 +84,7 @@ By doing this we ensure that the retrieve of the top ten shows is reduced to a s
 * Create sample data for a show.
 
 **test/models/reviews.rb**
-* Define test to test the #update_show_average_rating method and make sure it is called on the :after_create callback.
+* Define test to test the #update_show_reviews_average method and make sure it is called on the :after_create callback.
 
 **test/models/shows.rb**
 * Define test to test the #calculate_reviews_average method.
