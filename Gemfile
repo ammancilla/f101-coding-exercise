@@ -13,12 +13,12 @@ group :development, :test do
 end
 
 # Assets
-gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Other
+gem 'bootstrap-sass'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'turbolinks'
