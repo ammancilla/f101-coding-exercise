@@ -14,18 +14,20 @@
 ActiveRecord::Schema.define(version: 20150515002816) do
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "show_id"
-    t.string  "critic_name"
+    t.integer "show_id",          null: false
+    t.string  "critic_name",      null: false
     t.string  "publication_name"
-    t.float   "score"
+    t.float   "score",            null: false
     t.text    "body"
   end
 
   add_index "reviews", ["show_id"], name: "index_reviews_on_show_id"
 
   create_table "shows", force: :cascade do |t|
-    t.string "title"
-    t.text   "description"
+    t.string  "title",                                                 null: false
+    t.text    "description"
+    t.integer "reviews_count",                           default: 0
+    t.decimal "reviews_average", precision: 4, scale: 2, default: 0.0
   end
 
 end
