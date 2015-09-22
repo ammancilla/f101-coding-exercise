@@ -5,6 +5,8 @@ class CreateSchema < ActiveRecord::Migration
       t.text :description
       t.integer :reviews_count,   default: 0
       t.decimal :reviews_average, default: 0, precision: 4, scale: 2
+
+      t.timestamps null: false
     end
 
     create_table :reviews do |t|

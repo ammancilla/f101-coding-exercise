@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(version: 20150515002816) do
   add_index "reviews", ["show_id"], name: "index_reviews_on_show_id"
 
   create_table "shows", force: :cascade do |t|
-    t.string  "title",                                                 null: false
-    t.text    "description"
-    t.integer "reviews_count",                           default: 0
-    t.decimal "reviews_average", precision: 4, scale: 2, default: 0.0
+    t.string   "title",                                                 null: false
+    t.text     "description"
+    t.integer  "reviews_count",                           default: 0
+    t.decimal  "reviews_average", precision: 4, scale: 2, default: 0.0
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
   end
 
 end
